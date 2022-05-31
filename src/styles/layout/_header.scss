@@ -1,0 +1,14 @@
+header {
+  height: 10rem;
+  background-color: red;
+
+  .logo {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 4rem;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 25%);
+  }
+}
