@@ -1,0 +1,35 @@
+.main-home {
+  display: flex;
+  justify-content: center;
+
+  width: 70vw;
+  height: 70vh;
+  margin: 12rem auto;
+  border: 1px solid black;
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    &__text {
+      width: 220px;
+      text-align: justify;
+    }
+
+    &__btn {
+      &--offer {
+      }
+
+      &--menu {
+      }
+    }
+  }
+}
