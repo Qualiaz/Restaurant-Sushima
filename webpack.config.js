@@ -19,7 +19,7 @@ module.exports = {
     static: path.resolve(__dirname, "dist"),
     port: 5001,
     open: true,
-    hot: false,
+    hot: true,
     compress: true,
   },
 

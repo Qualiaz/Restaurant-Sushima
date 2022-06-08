@@ -1,26 +1,44 @@
-import homeImgOffer from "../../assets/ph1.jpeg";
+import homeImgOffer from "../../assets/menu/foods/naruto.jpg";
 
 export default function home() {
   const main = document.querySelector("#main");
-  const mainHome = `
-  <div class="main-home" id="homeContainer">
-  <div class="main-home__cta">
-            <div class="main-home__cta-img">
-              <img src="${homeImgOffer}" />
-            </div>
-            <div class="main-home__cta-content">
-              <p class="main-home__cta__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-                iste earum vel esse autem animi ex unde, voluptates adipisci
-                repellat ratione id, eaque ipsam! Accusamus consequatur deleniti
-                iste illo voluptatem.
-              </p>
-              <button class="main-home__cta__btn--offer">Vezi Oferta</button>
-              <button class="main-home__cta__btn--menu">Vezi Meniu</button>
-            </div>
-          </div>
-          </div>
-  `;
+  main.textContent = undefined;
 
-  main.innerHTML = mainHome;
+  const homeContainer = document.createElement("div");
+  homeContainer.setAttribute("class", "main-home");
+  main.appendChild(homeContainer);
+
+  //*********  Call to action  **********//
+  //******                        ******//
+
+  const homeCta = document.createElement("div");
+  homeCta.setAttribute("class", "main-home__cta");
+  homeContainer.appendChild(homeCta);
+
+  const offerImg = document.createElement("img");
+  offerImg.setAttribute("class", "main-home__cta-img");
+  offerImg.setAttribute("src", homeImgOffer);
+  homeCta.appendChild(offerImg);
+
+  const ctaContent = document.createElement("div");
+  ctaContent.setAttribute("class", "main-home__cta-content");
+  homeCta.appendChild(ctaContent);
+
+  const ctaText = document.createElement("p");
+  ctaText.setAttribute("class", "main-home__cta-text");
+  ctaText.textContent = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+                        iste earum vel esse autem animi ex unde, voluptates adipisci
+                        repellat ratione id, eaque ipsam! Accusamus consequatur deleniti
+                        iste illo voluptatem.`;
+  ctaContent.appendChild(ctaText);
+
+  const ctaBtnOffer = document.createElement("button");
+  ctaBtnOffer.setAttribute("class", "main-home__cta-btn--offer");
+  ctaBtnOffer.textContent = "Vezi oferta";
+  ctaContent.appendChild(ctaBtnOffer);
+
+  const ctaBtnMenu = document.createElement("button");
+  ctaBtnMenu.setAttribute("class", "main-home__cta-btn--menu");
+  ctaBtnMenu.textContent = "Vezi meniu";
+  ctaContent.appendChild(ctaBtnMenu);
 }

@@ -1,0 +1,56 @@
+.main-menu {
+  @include main;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__categories {
+    display: flex;
+    // align-self: flex-end;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  &__items {
+    padding: 2rem;
+    &-sushi,
+    &-beverages {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+
+  &__item {
+    width: 360px;
+    height: 360px;
+
+    border-radius: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-menu {
+    &__items {
+      &-sushi,
+      &-beverages {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    &__item {
+      width: 320px;
+      height: 320px;
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .main-menu {
+    &__items {
+      &-sushi,
+      &-beverages {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

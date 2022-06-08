@@ -1,0 +1,10 @@
+@mixin main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 95vw;
+  // height: vh;
+  margin: 12rem auto;
+  border: 1px solid black;
+}
