@@ -41,6 +41,7 @@ export default function menu() {
   menuSushiBtn.addEventListener("click", () => {
     menuItemsBeverages.textContent = undefined;
     menuAppendSushi();
+    menu();
   });
 
   const menuBeveragesBtn = document.createElement("button");
@@ -67,67 +68,131 @@ export default function menu() {
   menuItemsSushi.setAttribute("class", "main-menu__items-sushi");
   menuItems.appendChild(menuItemsSushi);
 
+  ///////// AKIRA ////////
+
+  const akiraContainer = document.createElement("div");
+  akiraContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(akiraContainer);
+
   const akiraImg = document.createElement("img");
   akiraImg.setAttribute("class", "main-menu__item");
   akiraImg.setAttribute("src", menuItemAkira);
+
+  ///////// CHIHA ////////
+
+  const chihaContainer = document.createElement("div");
+  chihaContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(chihaContainer);
 
   const chihaImg = document.createElement("img");
   chihaImg.setAttribute("class", "main-menu__item");
   chihaImg.setAttribute("src", menuItemChiha);
 
+  ///////// HANA ////////
+
+  const hanaContainer = document.createElement("div");
+  hanaContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(hanaContainer);
+
   const hanaImg = document.createElement("img");
   hanaImg.setAttribute("class", "main-menu__item");
   hanaImg.setAttribute("src", menuItemHana);
+
+  ///////// ITSUKI ////////
+
+  const itsukiContainer = document.createElement("div");
+  itsukiContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(itsukiContainer);
 
   const itsukiImg = document.createElement("img");
   itsukiImg.setAttribute("class", "main-menu__item");
   itsukiImg.setAttribute("src", menuItemItsuki);
 
+  ///////// KAITO ////////
+  const kaitoContainer = document.createElement("div");
+  kaitoContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(kaitoContainer);
+
   const kaitoImg = document.createElement("img");
   kaitoImg.setAttribute("class", "main-menu__item");
   kaitoImg.setAttribute("src", menuItemKaito);
+
+  ///////// KANAI ////////
+  const kanaiContainer = document.createElement("div");
+  kanaiContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(kanaiContainer);
 
   const kanaiImg = document.createElement("img");
   kanaiImg.setAttribute("class", "main-menu__item");
   kanaiImg.setAttribute("src", menuItemKanai);
 
+  ///////// NARUTO ////////
+  const narutoContainer = document.createElement("div");
+  narutoContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(narutoContainer);
+
   const narutoImg = document.createElement("img");
   narutoImg.setAttribute("class", "main-menu__item");
   narutoImg.setAttribute("src", menuItemNaruto);
+
+  ///////// REN ////////
+  const renContainer = document.createElement("div");
+  renContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(renContainer);
 
   const renImg = document.createElement("img");
   renImg.setAttribute("class", "main-menu__item");
   renImg.setAttribute("src", menuItemRen);
 
+  ///////// SAEKO ////////
+  const saekoContainer = document.createElement("div");
+  saekoContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(saekoContainer);
+
   const saekoImg = document.createElement("img");
   saekoImg.setAttribute("class", "main-menu__item");
   saekoImg.setAttribute("src", menuItemSaeko);
+
+  ///////// SAYO ////////
+  const sayoContainer = document.createElement("div");
+  sayoContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(sayoContainer);
 
   const sayoImg = document.createElement("img");
   sayoImg.setAttribute("class", "main-menu__item");
   sayoImg.setAttribute("src", menuItemSayo);
 
+  ///////// SORA ////////
+  const soraContainer = document.createElement("div");
+  soraContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(soraContainer);
+
   const soraImg = document.createElement("img");
   soraImg.setAttribute("class", "main-menu__item");
   soraImg.setAttribute("src", menuItemSora);
+
+  ///////// TAKASHI ////////
+  const takashiContainer = document.createElement("div");
+  takashiContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsSushi.appendChild(takashiContainer);
 
   const takashiImg = document.createElement("img");
   takashiImg.setAttribute("class", "main-menu__item");
   takashiImg.setAttribute("src", menuItemTakashi);
 
   function menuAppendSushi() {
-    menuItemsSushi.appendChild(akiraImg);
-    menuItemsSushi.appendChild(chihaImg);
-    menuItemsSushi.appendChild(hanaImg);
-    menuItemsSushi.appendChild(itsukiImg);
-    menuItemsSushi.appendChild(kaitoImg);
-    menuItemsSushi.appendChild(kanaiImg);
-    menuItemsSushi.appendChild(narutoImg);
-    menuItemsSushi.appendChild(renImg);
-    menuItemsSushi.appendChild(saekoImg);
-    menuItemsSushi.appendChild(sayoImg);
-    menuItemsSushi.appendChild(soraImg);
-    menuItemsSushi.appendChild(takashiImg);
+    akiraContainer.appendChild(akiraImg);
+    chihaContainer.appendChild(chihaImg);
+    hanaContainer.appendChild(hanaImg);
+    itsukiContainer.appendChild(itsukiImg);
+    kaitoContainer.appendChild(kaitoImg);
+    kanaiContainer.appendChild(kanaiImg);
+    narutoContainer.appendChild(narutoImg);
+    renContainer.appendChild(renImg);
+    saekoContainer.appendChild(saekoImg);
+    sayoContainer.appendChild(sayoImg);
+    soraContainer.appendChild(soraImg);
+    takashiContainer.appendChild(takashiImg);
   }
 
   menuAppendSushi();
@@ -138,31 +203,105 @@ export default function menu() {
   menuItemsBeverages.setAttribute("class", "main-menu__items-beverages");
   menuItems.appendChild(menuItemsBeverages);
 
+  //////// COCKTAIL LONG ISLAND ////////
+
+  const cocktailLongIslandContainer = document.createElement("div");
+  //prettier-ignore
+  cocktailLongIslandContainer.setAttribute("class","main-menu__item-container");
+  menuItemsBeverages.appendChild(cocktailLongIslandContainer);
+
   let cocktailLongIslandImg = document.createElement("img");
   cocktailLongIslandImg.setAttribute("class", "main-menu__item");
   cocktailLongIslandImg.setAttribute("src", menuItemCocktailLongIsland);
+
+  //////// COCKTAIL WATERMELON ////////
+
+  const cocktailWatermelonContainer = document.createElement("div");
+  //prettier-ignore
+  cocktailWatermelonContainer.setAttribute("class","main-menu__item-container");
+  menuItemsBeverages.appendChild(cocktailWatermelonContainer);
 
   let cocktailWatermelonImg = document.createElement("img");
   cocktailWatermelonImg.setAttribute("class", "main-menu__item");
   cocktailWatermelonImg.setAttribute("src", menuItemCocktailWatermelon);
 
+  //////// FRAPPE OREO ////////
+  const frappeOreoContainer = document.createElement("div");
+  frappeOreoContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsBeverages.appendChild(frappeOreoContainer);
+
   let frappeOreoImg = document.createElement("img");
   frappeOreoImg.setAttribute("class", "main-menu__item");
   frappeOreoImg.setAttribute("src", menuItemFrappeOreo);
 
+  //////// FRESH OREO ////////
+  const freshOrangeContainer = document.createElement("div");
+  freshOrangeContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsBeverages.appendChild(freshOrangeContainer);
+
   let freshOrangeImg = document.createElement("img");
   freshOrangeImg.setAttribute("class", "main-menu__item");
   freshOrangeImg.setAttribute("src", menuItemFreshOrange);
+
+  //////// WATER BOTTLE ////////
+  const waterBottleContainer = document.createElement("div");
+  waterBottleContainer.setAttribute("class", "main-menu__item-container");
+  menuItemsBeverages.appendChild(waterBottleContainer);
 
   let waterImg = document.createElement("img");
   waterImg.setAttribute("class", "main-menu__item");
   waterImg.setAttribute("src", menuItemWater);
 
   function menuAppendBeverages() {
-    menuItemsBeverages.appendChild(cocktailLongIslandImg);
-    menuItemsBeverages.appendChild(cocktailWatermelonImg);
-    menuItemsBeverages.appendChild(frappeOreoImg);
-    menuItemsBeverages.appendChild(freshOrangeImg);
-    menuItemsBeverages.appendChild(waterImg);
+    cocktailLongIslandContainer.appendChild(cocktailLongIslandImg);
+    cocktailWatermelonContainer.appendChild(cocktailWatermelonImg);
+    frappeOreoContainer.appendChild(frappeOreoImg);
+    freshOrangeContainer.appendChild(freshOrangeImg);
+    waterBottleContainer.appendChild(waterImg);
   }
+
+  // ITEM INFO
+
+  const itemInfo = document.createElement("div");
+  itemInfo.setAttribute("class", "main-menu__item-info item-info");
+
+  const itemInfoName = document.createElement("div");
+  itemInfoName.setAttribute("class", "item-info__name");
+  itemInfo.appendChild(itemInfoName);
+
+  const itemInfoPrice = document.createElement("div");
+  itemInfoPrice.setAttribute("class", "item-info__price");
+  itemInfo.appendChild(itemInfoPrice);
+
+  function hoverImg(img, name, price) {
+    img.addEventListener("mouseenter", () => {
+      img.appendChild(itemInfo);
+
+      itemInfoName.textContent = name;
+      itemInfoPrice.textContent = price;
+    });
+
+    img.addEventListener("mouseleave", () => {
+      img.removeChild(itemInfo);
+    });
+  }
+
+  hoverImg(akiraContainer, "Akira", "30 RON");
+  hoverImg(chihaContainer);
+  hoverImg(hanaContainer);
+  hoverImg(itsukiContainer);
+  hoverImg(kaitoContainer);
+  hoverImg(kanaiContainer);
+  hoverImg(narutoContainer);
+  hoverImg(renContainer);
+  hoverImg(saekoContainer);
+  hoverImg(sayoContainer);
+  hoverImg(soraContainer);
+  hoverImg(takashiContainer);
+
+  hoverImg(cocktailLongIslandContainer);
+  hoverImg(cocktailWatermelonContainer);
+  hoverImg(frappeOreoContainer);
+  hoverImg(freshOrangeContainer);
+  hoverImg(waterBottleContainer);
 }
