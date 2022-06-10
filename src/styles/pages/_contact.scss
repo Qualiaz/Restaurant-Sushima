@@ -1,0 +1,19 @@
+.main-contact {
+  @include main;
+  gap: 15rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    h3 {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__img {
+    width: 600px;
+    border-radius: 3rem;
+  }
+}
