@@ -1,21 +1,19 @@
+button:hover {
+  cursor: pointer;
+}
+
 .nav__button {
   padding: 1rem;
-  border: 1px solid green;
+  border: 3px solid $primary;
   min-width: 15rem;
-  border-radius: 4px;
+  border-radius: 1.5rem;
   font-size: 2.2rem;
   letter-spacing: 0.2rem;
   background: none;
-}
+  transition: 0.2s;
 
-.main-menu {
-  &__sushi-btn,
-  &__beverages-btn {
-    padding: 0 1rem;
-    width: 10rem;
-    border: 2px solid black;
-    border-radius: 5px;
-    background: none;
+  &:hover {
+    background-color: $primary;
   }
 }
 
@@ -23,11 +21,33 @@
   &__cta {
     &-btn--offer,
     &-btn--menu {
-      padding: 0 1rem;
-      width: 10rem;
-      border: 2px solid black;
-      border-radius: 5px;
+      padding: 1rem 4rem;
+      border: 3px solid $primary;
+
+      border-radius: 1.5rem;
       background: none;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.main-menu {
+  &__sushi-btn,
+  &__beverages-btn {
+    padding: 1rem 1rem;
+    width: 13rem;
+    border: 2px solid $primary;
+    border-radius: 1.5rem;
+    background: none;
+
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $primary;
     }
   }
 }

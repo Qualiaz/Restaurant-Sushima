@@ -1,10 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
 body {
+  font-family: "Aclonica", sans-serif;
   font-size: 1.6rem;
+  color: #fff;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.2rem;
 }
 
 .main-menu {
   &__sushi-btn,
   &__beverages-btn {
+    font-family: inherit;
     font-size: 2rem;
+    color: #fff;
+  }
+}
+
+.nav__button {
+  font-family: inherit;
+  color: #fff;
+}
+
+.main-home {
+  font-family: inherit;
+
+  &__cta-btn--offer,
+  &__cta-btn--menu {
+    font-family: inherit;
+    font-size: 2.2rem;
+    color: #fff;
   }
 }

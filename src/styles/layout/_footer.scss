@@ -3,9 +3,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   // height: 10vh;
-  background-color: bisque;
+  background-color: $background-two;
   padding: 2rem;
 
   &__content-1 {
@@ -15,9 +15,10 @@
   }
 
   .logo {
+    margin-bottom: 2rem;
     width: 5rem;
     height: 5rem;
     border-radius: 1rem;
-    background-color: aqua;
+    background-color: $primary;
   }
 }
