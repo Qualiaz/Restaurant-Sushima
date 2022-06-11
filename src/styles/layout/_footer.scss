@@ -4,7 +4,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  // height: 10vh;
   background-color: $background-two;
   padding: 2rem;
 
@@ -16,9 +15,9 @@
 
   .logo {
     margin-bottom: 2rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
-    background-color: $primary;
+    width: 10rem;
+    height: 10rem;
+
+    // background-color: $primary;
   }
 }
