@@ -23,14 +23,16 @@
   &__item {
     width: 420px;
     height: 390px;
+
     &-container {
       position: relative;
+      height: 390px;
       border-radius: 2rem;
       overflow: hidden;
       transition: 0.2s;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         cursor: pointer;
         filter: brightness(115%);
       }
@@ -42,18 +44,15 @@
       align-items: center;
 
       position: absolute;
-      bottom: 5px;
+      bottom: 0;
       width: 100%;
-      height: 0;
-
+      height: 100%;
       background-color: green;
       opacity: 0.5;
 
-      animation: infoAnimEnter 0.2s forwards;
-
       @keyframes infoAnimEnter {
         from {
-          height: 0px;
+          height: 0;
         }
 
         to {
@@ -61,14 +60,46 @@
         }
       }
 
+      @keyframes infoAnimLeave {
+        from {
+          height: 100px;
+        }
+
+        to {
+          height: 0px;
+          display: none;
+        }
+      }
+
       .item-info__ {
         &name,
         &price {
           margin: 0 1rem;
-          width: 100px;
-          height: 20px;
+          // width: 100px;
           background-color: rgb(255, 255, 255);
           text-align: center;
+          font-size: 0;
+          color: red;
+        }
+
+        @keyframes infoAnimChildEnter {
+          from {
+            font-size: 0;
+          }
+
+          to {
+            font-size: 1.6rem;
+          }
+        }
+
+        @keyframes infoAnimChildLeave {
+          0% {
+            font-size: 1.6rem;
+          }
+
+          80% {
+            font-size: 0;
+          }
         }
       }
     }

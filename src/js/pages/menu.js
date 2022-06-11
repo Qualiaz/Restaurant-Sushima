@@ -44,6 +44,9 @@ export default function menu() {
     menu();
   });
 
+  const menuItemsBeverages = document.createElement("div");
+  menuItemsBeverages.setAttribute("class", "main-menu__items-beverages");
+
   const menuBeveragesBtn = document.createElement("button");
   menuBeveragesBtn.className = "main-menu__beverages-btn";
   menuBeveragesBtn.setAttribute("id", "menuBeveragesBtn");
@@ -52,6 +55,7 @@ export default function menu() {
   menuBeveragesBtn.addEventListener("click", () => {
     menuItemsSushi.textContent = undefined;
     menuAppendBeverages();
+    menuItems.appendChild(menuItemsBeverages);
   });
 
   menuCategories.appendChild(menuBeveragesBtn);
@@ -199,9 +203,9 @@ export default function menu() {
 
   //********* BEVERAGES ITEMS **********//
   //******                        ******//
-  const menuItemsBeverages = document.createElement("div");
-  menuItemsBeverages.setAttribute("class", "main-menu__items-beverages");
-  menuItems.appendChild(menuItemsBeverages);
+  // const menuItemsBeverages = document.createElement("div");
+  // menuItemsBeverages.setAttribute("class", "main-menu__items-beverages");
+  // menuItems.appendChild(menuItemsBeverages);
 
   //////// COCKTAIL LONG ISLAND ////////
 
@@ -277,31 +281,38 @@ export default function menu() {
     img.addEventListener("mouseenter", () => {
       img.appendChild(itemInfo);
 
+      itemInfo.style.animation = "infoAnimEnter 0.2s forwards";
       itemInfoName.textContent = name;
       itemInfoPrice.textContent = price;
+
+      itemInfoName.style.animation = "infoAnimChildEnter 0.2s forwards";
+      itemInfoPrice.style.animation = "infoAnimChildEnter 0.2s forwards";
     });
 
     img.addEventListener("mouseleave", () => {
-      img.removeChild(itemInfo);
+      itemInfo.style.animation = "infoAnimLeave 0.2s forwards";
+
+      itemInfoName.style.animation = "infoAnimChildLeave 0.2s forwards";
+      itemInfoPrice.style.animation = "infoAnimChildLeave 0.2s forwards";
     });
   }
 
-  hoverImg(akiraContainer, "Akira", "30 RON");
-  hoverImg(chihaContainer);
-  hoverImg(hanaContainer);
-  hoverImg(itsukiContainer);
-  hoverImg(kaitoContainer);
-  hoverImg(kanaiContainer);
-  hoverImg(narutoContainer);
-  hoverImg(renContainer);
-  hoverImg(saekoContainer);
-  hoverImg(sayoContainer);
-  hoverImg(soraContainer);
-  hoverImg(takashiContainer);
+  hoverImg(akiraContainer, "Akira", "35 RON");
+  hoverImg(chihaContainer, "Chiha", "50 RON");
+  hoverImg(hanaContainer, "Hana", "60 RON");
+  hoverImg(itsukiContainer, "Itsuki", "35 RON");
+  hoverImg(kaitoContainer, "Kaito", "25 RON");
+  hoverImg(kanaiContainer, "Kanai", "60 RON");
+  hoverImg(narutoContainer, "Naruto", "20 RON");
+  hoverImg(renContainer, "Ren", "35 RON");
+  hoverImg(saekoContainer, "Saeko", "40 RON");
+  hoverImg(sayoContainer, "Sayo", "35 RON");
+  hoverImg(soraContainer, "Sora", "35 RON");
+  hoverImg(takashiContainer, "Takashi", "40 RON");
 
-  hoverImg(cocktailLongIslandContainer);
-  hoverImg(cocktailWatermelonContainer);
-  hoverImg(frappeOreoContainer);
-  hoverImg(freshOrangeContainer);
-  hoverImg(waterBottleContainer);
+  hoverImg(cocktailLongIslandContainer, "Cocktail Long Island", "20 RON");
+  hoverImg(cocktailWatermelonContainer, "Watermelon", "18 RON");
+  hoverImg(frappeOreoContainer, "Frappe Oreo", "15 RON");
+  hoverImg(freshOrangeContainer, "Fresh Orange", "10 RON");
+  hoverImg(waterBottleContainer, "Sticla Apa", "5 Ron");
 }

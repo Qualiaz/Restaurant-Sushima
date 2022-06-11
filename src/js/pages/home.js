@@ -1,4 +1,5 @@
 import homeImgOffer from "../../assets/menu/foods/naruto.jpg";
+import menu from "./menu";
 
 export default function home() {
   const main = document.querySelector("#main");
@@ -41,4 +42,12 @@ export default function home() {
   ctaBtnMenu.setAttribute("class", "main-home__cta-btn--menu");
   ctaBtnMenu.textContent = "Vezi meniu";
   ctaContent.appendChild(ctaBtnMenu);
+
+  ctaBtnOffer.addEventListener("click", () => {
+    menu();
+  });
+
+  ctaBtnMenu.addEventListener("click", () => {
+    menu();
+  });
 }
