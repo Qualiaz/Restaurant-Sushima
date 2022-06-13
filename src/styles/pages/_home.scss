@@ -24,3 +24,32 @@
     }
   }
 }
+
+//*** PHONE & TABLET ***//
+
+@media only screen and (max-width: 920px) {
+  .main-home {
+    &__cta {
+      flex-direction: column;
+      &-img {
+        margin-top: 4rem;
+        width: 40rem;
+        height: 40rem;
+      }
+      &-content {
+        width: 30rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main-home {
+    &__cta {
+      &-img {
+        width: 90vw;
+        height: 35rem;
+      }
+    }
+  }
+}

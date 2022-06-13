@@ -311,7 +311,7 @@ export default function menu() {
   hoverImg(takashiContainer, "Takashi", "40 RON");
 
   hoverImg(cocktailLongIslandContainer, "Cocktail Long Island", "20 RON");
-  hoverImg(cocktailWatermelonContainer, "Watermelon", "18 RON");
+  hoverImg(cocktailWatermelonContainer, "Cocktail Watermelon", "18 RON");
   hoverImg(frappeOreoContainer, "Frappe Oreo", "15 RON");
   hoverImg(freshOrangeContainer, "Fresh Orange", "10 RON");
   hoverImg(waterBottleContainer, "Sticla Apa", "5 Ron");

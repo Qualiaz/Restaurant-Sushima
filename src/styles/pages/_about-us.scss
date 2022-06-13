@@ -12,9 +12,11 @@
 
   &__section {
     display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
     gap: 14.5rem;
 
-    //second section
+    //section 2
     &:nth-child(2) {
       img {
         box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
@@ -34,7 +36,7 @@
       }
     }
 
-    //third section
+    // section 3
     &:nth-child(3) {
       img {
         box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
@@ -50,7 +52,53 @@
   }
 
   &__restaurant-img {
-    max-height: 600px;
-    min-width: 1000px;
+    max-height: 60rem;
+    min-width: 100rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-aboutus {
+    &__restaurant-img {
+      min-width: 90vw;
+    }
+
+    &__section {
+      gap: 5rem;
+      flex-direction: column;
+
+      //section 3
+      &:nth-child(3) {
+        //paragraph container
+        & :last-child {
+          order: -1;
+          h4 {
+            order: -2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-aboutus {
+    &__section {
+      &:nth-child(3),
+      &:nth-child(2) {
+        img {
+          height: 30rem;
+          width: 36rem;
+        }
+
+        & :last-child {
+          h4 {
+            font-size: 2.4rem;
+          }
+          font-size: 1.4rem;
+          margin: auto;
+        }
+      }
+    }
   }
 }
