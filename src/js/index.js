@@ -8,6 +8,7 @@ import home from "./pages/home";
 import menu from "./pages/menu";
 
 import logoMain from "../assets/logo/logo-main.png";
+import hamburgerIcon from "../assets/nav/hamburger-icon.png";
 
 home();
 
@@ -28,6 +29,10 @@ const content = document.querySelector("#content");
 
 const navMobile = document.querySelector(".nav__mobile");
 const hamburgerBtn = document.querySelector("#hamburgerBtn");
+const hamburgerBtnIcon = document.createElement("img");
+hamburgerBtnIcon.setAttribute("clas", "nav__mobile__hamburger-icon");
+hamburgerBtnIcon.setAttribute("src", hamburgerIcon);
+hamburgerBtn.appendChild(hamburgerBtnIcon);
 
 hamburgerBtn.addEventListener("click", () => {
   const hamburgerMidLayer = document.createElement("div");

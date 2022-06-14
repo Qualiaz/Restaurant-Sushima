@@ -23,6 +23,10 @@
     &__hamburger-button {
       display: none;
     }
+
+    &__btn {
+      display: none;
+    }
   }
 }
 
@@ -41,49 +45,56 @@
       &__hamburger-button {
         display: block;
         position: absolute;
+        background: none;
+        height: 4.3rem;
+        border: none;
         right: 5%;
         top: 50%;
         transform: translateY(-50%);
-
-        width: 5rem;
-        height: 5rem;
       }
 
       &__hamburger-mid-layer {
         width: 100vw;
         height: 100vh;
-        background-color: red;
         position: fixed;
+        background-color: black;
+        opacity: 0.6;
         z-index: 1;
-        opacity: 0.3;
       }
 
       &__hamburger-menu {
-        width: 80vw;
-        height: 70vh;
-        background-color: green;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        // opacity: 0.4;
-        position: fixed;
-        transform: translateY(22.5%);
-        z-index: 2;
-        // cursor: pointer;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        position: fixed;
+        width: 80vw;
+        height: 70vh;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+
+        background-color: $background;
+        transform: translateY(22.5%);
+        z-index: 2;
+
+        border-radius: 20px;
+        box-shadow: 10px 15px 20px 5px rgba(0, 0, 0, 0.5);
       }
 
+      //CAN'T FIGURE OUT WHY BUTTON WON'T DISPLAY ON _buttons.scss
       &__btn {
-        background: none;
-        outline: none;
-        border: none;
-        text-align: center;
-        border-bottom: 2px solid black;
-        cursor: pointer;
+        display: block;
         min-height: 25%;
+
+        background: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 26px 1px -24px $primary;
+
+        &:last-child {
+          box-shadow: none;
+        }
       }
     }
   }

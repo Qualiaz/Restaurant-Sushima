@@ -137,6 +137,7 @@ export default function menu() {
 
   const narutoImg = document.createElement("img");
   narutoImg.setAttribute("class", "main-menu__item");
+  narutoImg.setAttribute("id", "naruto");
   narutoImg.setAttribute("src", menuItemNaruto);
 
   ///////// REN ////////
@@ -315,4 +316,6 @@ export default function menu() {
   hoverImg(frappeOreoContainer, "Frappe Oreo", "15 RON");
   hoverImg(freshOrangeContainer, "Fresh Orange", "10 RON");
   hoverImg(waterBottleContainer, "Sticla Apa", "5 Ron");
+
+  return narutoImg;
 }
