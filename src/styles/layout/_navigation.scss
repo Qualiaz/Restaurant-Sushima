@@ -19,8 +19,10 @@
     gap: 2rem;
   }
 
-  &__hamburger-button {
-    display: none;
+  &__mobile {
+    &__hamburger-button {
+      display: none;
+    }
   }
 }
 
@@ -28,25 +30,61 @@
 
 @media only screen and (max-width: 1000px) {
   .nav {
-    &__left,
-    &__right {
+    &__desktop {
       display: none;
     }
 
     &__mobile {
       height: inherit;
       position: relative;
-    }
 
-    &__hamburger-button {
-      display: block;
-      position: absolute;
-      right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
+      &__hamburger-button {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
 
-      width: 5rem;
-      height: 5rem;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &__hamburger-mid-layer {
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+        position: fixed;
+        z-index: 1;
+        opacity: 0.3;
+      }
+
+      &__hamburger-menu {
+        width: 80vw;
+        height: 70vh;
+        background-color: green;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        // opacity: 0.4;
+        position: fixed;
+        transform: translateY(22.5%);
+        z-index: 2;
+        // cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &__btn {
+        background: none;
+        outline: none;
+        border: none;
+        text-align: center;
+        border-bottom: 2px solid black;
+        cursor: pointer;
+        min-height: 25%;
+      }
     }
   }
 }
